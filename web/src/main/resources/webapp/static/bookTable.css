@@ -1,0 +1,22 @@
+#tableKsiazki {
+	font-weight: bold;
+	font-style: normal;
+	padding: 10px;
+	background-color: #C0C0C0;
+	border-style: double;
+}
+
+tbody tr td {
+	border: 1px solid #000;
+	text-align: center;
+	text-valign=middle;
+	padding: 15px;
+}
+
+.enterenceHeader {
+	color: rgb(255, 0, 0);
+}
+
+#headerTable {
+	color: rgb(50, 255, 200);
+}
