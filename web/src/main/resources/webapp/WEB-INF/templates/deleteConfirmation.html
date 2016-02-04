@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>Książka została usunięta:</title>
+</head>
+<body>
+	<br />
+	<b>Książka o tytule:</b>
+	<p th:text="${deletedBook.title}">title</p>
+	<b>Autorstwa:</b>
+	<p th:text="${deletedBook.authors}">authors</p>
+	<br />
+	<b>została usunięta </b>
+	<br />
+	 <a th:href="@{|/books|}"><span>Wróć do Biblioteki</span></a>
+
+</body>
+</html>

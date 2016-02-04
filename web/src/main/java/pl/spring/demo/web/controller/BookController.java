@@ -2,8 +2,12 @@ package pl.spring.demo.web.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
+
 import pl.spring.demo.service.BookService;
 import pl.spring.demo.to.BookTo;
 
@@ -23,5 +27,13 @@ public class BookController {
         return "bookList";
     }
     
+    @RequestMapping(value = "/bookDelete/{id}", method = RequestMethod.GET)
+	public String removeBookId(@PathVariable(value = "id") Long id, Map<String, Object> params) {
+    	
+    	BookTo book =  bookService.removeBookById(id);
+		params.put("deletedBook", book);
+		//return "redirect:/books";
+		return "deleteConfirmation";
+	}
     
 }
