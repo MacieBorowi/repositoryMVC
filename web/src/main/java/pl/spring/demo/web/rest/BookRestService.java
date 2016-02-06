@@ -7,6 +7,7 @@ import pl.spring.demo.service.BookService;
 import pl.spring.demo.to.BookTo;
 
 import java.util.List;
+import java.util.Map;
 
 @Controller
 @ResponseBody
@@ -24,4 +25,19 @@ public class BookRestService {
     public BookTo saveBook(@RequestBody BookTo book) {
         return bookService.saveBook(book);
     }
+    
+    @RequestMapping(value = "/book", method = RequestMethod.DELETE)
+	public void removeBook(@RequestBody Long id) {
+		bookService.removeBookById(id);
+	}
+
+	@RequestMapping(value = "/book", method = RequestMethod.PUT)
+	public BookTo bookUpdate(@RequestBody BookTo book) {
+		return bookService.saveBook(book);
+	}
+	
+	//Poster
+	//Content-Type	application/json
+	//http://localhost:9721/workshop/book
+	//{"id":8,"title":"Dra","authors":"Zbignielhvcvrvrrevfwak"}
 }

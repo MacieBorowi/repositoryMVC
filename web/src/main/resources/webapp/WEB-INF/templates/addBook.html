@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>Adding Book</title>
+</head>
+<body>
+	<h1 class="enterenceHeader">Dodaj nową książkę:</h1>
+	<table>
+		<tr class="bookAdd">
+			<form th:action="@{/books/add}" method="post">
+				<td>Tytuł : <input type="text" name="title"></input></td>
+				<td>Autor : <input type="text" name="authors"></input></td>
+				<td><input type="submit" value="Dodaj"></input></td>
+			</form>
+		</tr>
+	</table>
+	<br />
+	 <b><a th:href="@{|/books|}"><span>Anuluj dodawanie</span></a></b>
+</body>
+</html>

@@ -20,6 +20,7 @@ import pl.spring.demo.web.utils.FileUtils;
 import java.io.File;
 import java.util.Arrays;
 
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.delete;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.put;
@@ -85,4 +86,18 @@ public class BookRestServiceTest {
         // then
         response.andExpect(status().isOk());
     }
+    
+    @Test
+	public void testShouldRemoveBook() throws Exception {
+		// given
+		Long id = 1L; 
+		// when
+		ResultActions response = this.mockMvc.perform(delete("/book")
+				.accept(MediaType.APPLICATION_JSON)
+				.contentType(MediaType.APPLICATION_JSON)
+				.content(id.toString()));
+		// then
+		response.andExpect(status().isOk());
+		Mockito.verify(bookService).removeBookById(id);
+	}
 }

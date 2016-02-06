@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -22,6 +23,7 @@ public class BookController {
 
     @RequestMapping(value = "/books", method = RequestMethod.GET)
     public String bookList(Map<String, Object> params) {
+    	
         final List<BookTo> allBooks = bookService.findAllBooks();
         params.put("books", allBooks);
         return "bookList";
@@ -32,8 +34,23 @@ public class BookController {
     	
     	BookTo book =  bookService.removeBookById(id);
 		params.put("deletedBook", book);
-		//return "redirect:/books";
+
 		return "deleteConfirmation";
+	}
+    
+    @RequestMapping(value = "/addBookForm", method = RequestMethod.GET)
+    public String addBook() {
+    	
+        return "addBook";
+    }
+    
+    @RequestMapping(value = "/books/add", method = RequestMethod.POST)
+	public String bookAdd(@ModelAttribute(value = "title") String title,
+			@ModelAttribute(value = "authors") String authors, Map<String, Object> params) {
+		if(!title.isEmpty()){			
+			bookService.saveBook(title, authors);
+		}
+		return "redirect:/books";
 	}
     
 }

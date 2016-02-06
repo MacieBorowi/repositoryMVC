@@ -3,26 +3,28 @@
 <head lang="en">
 <meta charset="UTF-8" />
 <title>Biblioteka</title>
-<link rel="stylesheet" th:href="@{/static/bookTable.css}" href="/static/bookTable.css" />
+<link rel="stylesheet" th:href="@{/static/bookTable.css}"
+	href="/static/bookTable.css" />
 </head>
 <body>
-	<h1 class = "enterenceHeader">Książki w bazie:</h1>
-	<br/>
+	<h1 class="enterenceHeader">Książki w bazie:</h1>
+	<br />
 	<table id="tableKsiazki">
-		<thead id = "headerTable">
+		<thead id="headerTable">
 			<th>Book Id</th>
 			<th>Title</th>
 			<th>Author</th>
 		</thead>
 		<div th:each="book : ${books}">
-			<tr>
-				<td><p th:text="${book.id}">id</p></td>
-				<td><p th:text="${book.title}">title</p></td>
-				<td><p th:text="${book.authors}">authors</p></td>
-				<td><a th:href="@{|/bookDelete/${book.id}|}"><span>Delete</span></a>
-				</td>
-			</tr>
+		<tr>
+			<td><p th:text="${book.id}">id</p></td>
+			<td><p th:text="${book.title}">title</p></td>
+			<td><p th:text="${book.authors}">authors</p></td>
+			<td><a th:href="@{|/bookDelete/${book.id}|}" method="delete"><span>Delete</span></a></td>
+		</tr>
 		</div>
 	</table>
+	<br />
+	<b><a th:href="@{|/addBookForm|}"><span>dodaj książkę</span></a></b>
 </body>
 </html>
