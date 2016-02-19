@@ -18,7 +18,9 @@ import pl.spring.demo.to.BookTo;
 import pl.spring.demo.web.utils.FileUtils;
 
 import java.io.File;
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.delete;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
@@ -91,13 +93,19 @@ public class BookRestServiceTest {
 	public void testShouldRemoveBook() throws Exception {
 		// given
 		Long id = 1L; 
+		final BookTo bookTo1 = new BookTo(1L, "bookTitle1", "Author1");
+	    final BookTo bookTo2 = new BookTo(2L, "bookTitle2", "Author2");
+	    List<BookTo> serviceList = new ArrayList<BookTo>(Arrays.asList(bookTo1, bookTo2));
+	    
 		// when
+	    Mockito.when(bookService.findBooksByTitle("bookTitle")).thenReturn(serviceList);
 		ResultActions response = this.mockMvc.perform(delete("/book")
 				.accept(MediaType.APPLICATION_JSON)
 				.contentType(MediaType.APPLICATION_JSON)
 				.content(id.toString()));
 		// then
 		response.andExpect(status().isOk());
+		// .andExpect(jsonPath("[0].id").value(bookTo1.getId().intValue()))
 		Mockito.verify(bookService).removeBookById(id);
 	}
 }
