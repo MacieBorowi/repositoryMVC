@@ -50,10 +50,10 @@ public class BookRestServiceTest {
     @Test
     public void testShouldCallBookService() throws Exception {
         // given
-        final String bookTitle = "testTitle";
+    	final String bookTitle = "testTitle";
 
-        final BookTo bookTo1 = new BookTo(1L, bookTitle, null,null);
-        final BookTo bookTo2 = new BookTo(2L, bookTitle, null, null);
+        final BookTo bookTo1 = new BookTo(1L, bookTitle, "Heniek", "Author1", null);
+        final BookTo bookTo2 = new BookTo(2L, bookTitle, "Janek", "Author2", null);
 
         Mockito.when(bookService.findBooksByTitle(bookTitle)).thenReturn(Arrays.asList(bookTo1, bookTo2));
 
@@ -65,14 +65,16 @@ public class BookRestServiceTest {
         Mockito.verify(bookService).findBooksByTitle(bookTitle);
 
         response.andExpect(status().isOk())
-
                 .andExpect(jsonPath("[0].id").value(bookTo1.getId().intValue()))
                 .andExpect(jsonPath("[0].title").value(bookTo1.getTitle()))
-                .andExpect(jsonPath("[0].authors").value(bookTo1.getAuthors()))
+                .andExpect(jsonPath("[0].authors[0].firstName").value(bookTo1.getAuthors().get(0).getFirstName()))
+                .andExpect(jsonPath("[0].authors[0].lastName").value(bookTo1.getAuthors().get(0).getLastName()))
 
                 .andExpect(jsonPath("[1].id").value(bookTo2.getId().intValue()))
                 .andExpect(jsonPath("[1].title").value(bookTo2.getTitle()))
-                .andExpect(jsonPath("[1].authors").value(bookTo2.getAuthors()));
+                .andExpect(jsonPath("[1].authors[0].firstName").value(bookTo2.getAuthors().get(0).getFirstName()))
+                .andExpect(jsonPath("[1].authors[0].lastName").value(bookTo2.getAuthors().get(0).getLastName()));
+
     }
 
     @Test

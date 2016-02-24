@@ -1,5 +1,6 @@
 package pl.spring.demo.to;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class BookTo {
@@ -16,6 +17,16 @@ public class BookTo {
 		this.title = title;
 		this.authors = authors;
 		this.libraryName = libraryName;
+	}
+
+	public BookTo(long id, String bookTitle, String firstName, String Lastneme, String library) {
+		List<AuthorTo> authors = new ArrayList<AuthorTo>();
+		authors.add(new AuthorTo(0L,firstName,Lastneme));
+		LibraryTo lib = new LibraryTo(0L, library);
+		this.id = id;
+		this.title = bookTitle;
+		this.authors = authors;
+		this.libraryName = lib;
 	}
 
 	public Long getId() {
