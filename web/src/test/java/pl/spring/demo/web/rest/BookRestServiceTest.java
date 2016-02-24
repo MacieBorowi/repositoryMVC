@@ -52,8 +52,8 @@ public class BookRestServiceTest {
         // given
         final String bookTitle = "testTitle";
 
-        final BookTo bookTo1 = new BookTo(1L, bookTitle, "Author1");
-        final BookTo bookTo2 = new BookTo(2L, bookTitle, "Author2");
+        final BookTo bookTo1 = new BookTo(1L, bookTitle, null,null);
+        final BookTo bookTo2 = new BookTo(2L, bookTitle, null, null);
 
         Mockito.when(bookService.findBooksByTitle(bookTitle)).thenReturn(Arrays.asList(bookTo1, bookTo2));
 
@@ -93,8 +93,8 @@ public class BookRestServiceTest {
 	public void testShouldRemoveBook() throws Exception {
 		// given
 		Long id = 1L; 
-		final BookTo bookTo1 = new BookTo(1L, "bookTitle1", "Author1");
-	    final BookTo bookTo2 = new BookTo(2L, "bookTitle2", "Author2");
+		final BookTo bookTo1 = new BookTo(1L, "bookTitle1", null, null);
+	    final BookTo bookTo2 = new BookTo(2L, "bookTitle2", null, null);
 	    List<BookTo> serviceList = new ArrayList<BookTo>(Arrays.asList(bookTo1, bookTo2));
 	    
 		// when

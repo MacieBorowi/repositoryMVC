@@ -23,7 +23,6 @@ public class EmbeddedJetty {
     private static final int DEFAULT_PORT = 9721;
     private static final String CONTEXT_PATH = "/workshop/";
     private static final String CONFIG_LOCATION = "classpath*:spring/*.xml";
-    //private static final String MAPPING_URL = "/*";
     private static final String MAPPING_URL = "/services/*";
     private static final String DEFAULT_PROFILE = "dev";
 

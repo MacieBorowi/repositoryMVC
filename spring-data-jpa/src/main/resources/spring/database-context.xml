@@ -13,6 +13,8 @@
         <property name="entityManagerFactory" ref="entityManagerFactory"/>
     </bean>
 
+	<bean id="bookRepository" class="pl.spring.demo.repository.impl.BookRepositoryImpl"/>
+
     <jdbc:embedded-database id="dataSource" type="HSQL" />
 
     <bean id="entityManagerFactory" class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean" depends-on="transactionManager">
