@@ -1,7 +1,6 @@
 package pl.spring.demo.service.impl;
 
 import java.util.ArrayList;
-import java.util.LinkedList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -59,6 +58,14 @@ public class BookServiceImpl implements BookService {
 	@Transactional(readOnly = false)
 	private void removeBook(BookTo book) {
 		bookRepository.delete(BookMapper.map(book));
+	}
+	
+	@Transactional(readOnly = false)
+	private void removeBook(Long id) {
+		BookTo book = BookMapper.map(bookRepository.findOne(id));
+		if (book != null) {
+			bookRepository.delete(BookMapper.map(book));
+		}
 	}
 
 	@Override

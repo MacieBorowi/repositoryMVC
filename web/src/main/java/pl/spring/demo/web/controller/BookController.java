@@ -29,7 +29,7 @@ public class BookController {
         return "bookList";
     }
     
-    @RequestMapping(value = "/bookDelete/{id}", method = RequestMethod.GET)
+    @RequestMapping(value = "/bookDelete/{id}", method = RequestMethod.DELETE)
 	public String removeBookId(@PathVariable(value = "id") Long id, Map<String, Object> params) {
     	
     	BookTo book =  bookService.removeBookById(id);

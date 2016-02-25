@@ -1,62 +1,60 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="pl.spring.demo.web.rest.BookRestServiceTest" time="0.092" tests="1" errors="0" skipped="0" failures="0">
+<testsuite name="pl.spring.demo.web.rest.BookRestServiceTest" time="0.099" tests="3" errors="0" skipped="0" failures="3">
   <properties>
-    <property name="idea.version" value="13.1.6"/>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
-    <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_40\jre\bin"/>
-    <property name="java.vm.version" value="25.40-b25"/>
+    <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_72\jre\bin"/>
+    <property name="java.vm.version" value="25.72-b15"/>
     <property name="user.country.format" value="DE"/>
     <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="maven.multiModuleProjectDirectory" value="C:\Borowik\workspace\MVC\web"/>
     <property name="java.vendor.url" value="http://java.oracle.com/"/>
     <property name="path.separator" value=";"/>
     <property name="guice.disable.misplaced.annotation.check" value="true"/>
     <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
     <property name="file.encoding.pkg" value="sun.io"/>
-    <property name="idea.launcher.port" value="7536"/>
     <property name="user.script" value=""/>
     <property name="user.country" value="US"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="sun.os.patch.level" value="Service Pack 1"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
-    <property name="user.dir" value="C:\projects\prezentation\business_logic_spring_hibernate"/>
-    <property name="java.runtime.version" value="1.8.0_40-b26"/>
+    <property name="user.dir" value="C:\Borowik\workspace\MVC\web"/>
+    <property name="java.runtime.version" value="1.8.0_72-b15"/>
     <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
-    <property name="java.endorsed.dirs" value="C:\Program Files\Java\jdk1.8.0_40\jre\lib\endorsed"/>
+    <property name="java.endorsed.dirs" value="C:\Program Files\Java\jdk1.8.0_72\jre\lib\endorsed"/>
     <property name="os.arch" value="amd64"/>
-    <property name="java.io.tmpdir" value="C:\Users\aotrzons\AppData\Local\Temp\"/>
+    <property name="java.io.tmpdir" value="C:\Users\MABOROWI\AppData\Local\Temp\"/>
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="user.variant" value=""/>
     <property name="os.name" value="Windows 7"/>
-    <property name="classworlds.conf" value="C:\projects\tools\apache-maven-3.2.5\bin\m2.conf"/>
+    <property name="classworlds.conf" value="C:\Borowik\workspace\MVC\.metadata\.plugins\org.eclipse.m2e.launching\launches\m2conf8621480329661851738.tmp"/>
     <property name="sun.jnu.encoding" value="Cp1252"/>
-    <property name="java.library.path" value="C:\Program Files\Java\jdk1.8.0_40\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\ProgramData\Oracle\Java\javapath;C:\oraclexe\app\oracle\product\11.2.0\server\bin;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\GitExtensions\;C:\Program Files\Java\jdk1.8.0_40\bin;C:\projects\tools\apache-maven-3.2.5\bin;C:\Program Files\nodejs\;C:\Program Files (x86)\Common Files\lenovo\easyplussdk\bin;C:\Program Files (x86)\Lenovo\Access Connections\;C:\Program Files (x86)\Git\bin;C:\Program Files\TortoiseSVN\bin;C:\Users\aotrzons\AppData\Roaming\npm;C:\Program Files\nodejs;C:\Program Files (x86)\IDM Computer Solutions\UltraEdit;."/>
+    <property name="java.library.path" value="C:\Program Files\Java\jdk1.8.0_72\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:/Program Files/Java/jre1.8.0_72/bin/server;C:/Program Files/Java/jre1.8.0_72/bin;C:/Program Files/Java/jre1.8.0_72/lib/amd64;C:\ProgramData\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files\nodejs\;C:\Users\MABOROWI\AppData\Local\GitHub\PortableGit_c7e0cbde92ba565cb218a521411d0e854079a28c\cmd;C:\Users\MABOROWI\AppData\Roaming\npm;C:\eclipse;;."/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="java.class.version" value="52.0"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="os.version" value="6.1"/>
-    <property name="user.home" value="C:\Users\aotrzons"/>
+    <property name="user.home" value="C:\Users\MABOROWI"/>
     <property name="user.timezone" value="Europe/Berlin"/>
     <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob"/>
     <property name="java.specification.version" value="1.8"/>
     <property name="file.encoding" value="UTF-8"/>
-    <property name="idea.launcher.bin.path" value="C:\Program Files (x86)\JetBrains\IntelliJ IDEA 13.1.6\bin"/>
-    <property name="user.name" value="AOTRZONS"/>
-    <property name="java.class.path" value="C:\projects\tools\apache-maven-3.2.5\boot\plexus-classworlds-2.5.2.jar;C:\Program Files (x86)\JetBrains\IntelliJ IDEA 13.1.6\lib\idea_rt.jar"/>
+    <property name="user.name" value="MABOROWI"/>
+    <property name="java.class.path" value="/C:/eclipse/plugins/org.eclipse.m2e.maven.runtime_1.6.2.20150902-0001/jars/plexus-classworlds-2.5.2.jar"/>
     <property name="java.vm.specification.version" value="1.8"/>
     <property name="sun.arch.data.model" value="64"/>
-    <property name="java.home" value="C:\Program Files\Java\jdk1.8.0_40\jre"/>
-    <property name="sun.java.command" value="com.intellij.rt.execution.application.AppMain org.codehaus.classworlds.Launcher -Didea.version=13.1.6 install"/>
+    <property name="java.home" value="C:\Program Files\Java\jdk1.8.0_72\jre"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher -B install"/>
     <property name="java.specification.vendor" value="Oracle Corporation"/>
     <property name="user.language" value="en"/>
     <property name="user.language.format" value="de"/>
     <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
     <property name="java.vm.info" value="mixed mode"/>
-    <property name="java.version" value="1.8.0_40"/>
-    <property name="java.ext.dirs" value="C:\Program Files\Java\jdk1.8.0_40\jre\lib\ext;C:\WINDOWS\Sun\Java\lib\ext"/>
-    <property name="sun.boot.class.path" value="C:\Program Files\Java\jdk1.8.0_40\jre\lib\resources.jar;C:\Program Files\Java\jdk1.8.0_40\jre\lib\rt.jar;C:\Program Files\Java\jdk1.8.0_40\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.8.0_40\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.8.0_40\jre\lib\jce.jar;C:\Program Files\Java\jdk1.8.0_40\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.8.0_40\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_40\jre\classes"/>
+    <property name="java.version" value="1.8.0_72"/>
+    <property name="java.ext.dirs" value="C:\Program Files\Java\jdk1.8.0_72\jre\lib\ext;C:\WINDOWS\Sun\Java\lib\ext"/>
+    <property name="sun.boot.class.path" value="C:\Program Files\Java\jdk1.8.0_72\jre\lib\resources.jar;C:\Program Files\Java\jdk1.8.0_72\jre\lib\rt.jar;C:\Program Files\Java\jdk1.8.0_72\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.8.0_72\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.8.0_72\jre\lib\jce.jar;C:\Program Files\Java\jdk1.8.0_72\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.8.0_72\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_72\jre\classes"/>
     <property name="java.vendor" value="Oracle Corporation"/>
-    <property name="maven.home" value="C:\projects\tools\apache-maven-3.2.5"/>
+    <property name="maven.home" value="C:\Borowik\workspace\MVC\web\EMBEDDED"/>
     <property name="file.separator" value="\"/>
     <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -64,5 +62,63 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase name="testShouldCallBookService" classname="pl.spring.demo.web.rest.BookRestServiceTest" time="0.092"/>
+  <testcase name="testShouldRemoveBook" classname="pl.spring.demo.web.rest.BookRestServiceTest" time="0.079">
+    <failure message="Status expected:&lt;200&gt; but was:&lt;404&gt;" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: Status expected:<200> but was:<404>
+	at org.springframework.test.util.AssertionErrors.fail(AssertionErrors.java:60)
+	at org.springframework.test.util.AssertionErrors.assertEquals(AssertionErrors.java:89)
+	at org.springframework.test.web.servlet.result.StatusResultMatchers$10.match(StatusResultMatchers.java:653)
+	at org.springframework.test.web.servlet.MockMvc$1.andExpect(MockMvc.java:152)
+	at pl.spring.demo.web.rest.BookRestServiceTest.testShouldRemoveBook(BookRestServiceTest.java:109)
+]]></failure>
+    <system-out><![CDATA[2016-02-25 16:38:10,996 INFO org.springframework.test.context.support.AbstractContextLoader - Detected default resource location "classpath:pl/spring/demo/web/rest/BookRestServiceTest-context.xml" for test class [pl.spring.demo.web.rest.BookRestServiceTest]
+2016-02-25 16:38:10,997 INFO org.springframework.test.context.support.AbstractDelegatingSmartContextLoader - GenericXmlWebContextLoader detected default locations for context configuration [ContextConfigurationAttributes@768b970c declaringClass = 'pl.spring.demo.web.rest.BookRestServiceTest', classes = '{}', locations = '{classpath:pl/spring/demo/web/rest/BookRestServiceTest-context.xml}', inheritLocations = true, initializers = '{}', inheritInitializers = true, name = [null], contextLoaderClass = 'org.springframework.test.context.ContextLoader'].
+2016-02-25 16:38:10,997 INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [pl.spring.demo.web.rest.BookRestServiceTest]: BookRestServiceTest does not declare any static, non-private, non-final, inner classes annotated with @Configuration.
+2016-02-25 16:38:10,999 INFO org.springframework.test.context.web.WebTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2016-02-25 16:38:10,999 INFO org.springframework.test.context.web.WebTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@7ba18f1b, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@2f8f5f62, org.springframework.test.context.support.DirtiesContextTestExecutionListener@1068e947, org.springframework.test.context.transaction.TransactionalTestExecutionListener@7dc222ae, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@aecb35a]
+2016-02-25 16:38:11,090 INFO org.springframework.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from class path resource [pl/spring/demo/web/rest/BookRestServiceTest-context.xml]
+2016-02-25 16:38:11,178 INFO org.springframework.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from class path resource [configuration/mvc-configuration.xml]
+2016-02-25 16:38:11,326 INFO org.springframework.web.context.support.GenericWebApplicationContext - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@46238e3f: startup date [Thu Feb 25 16:38:11 CET 2016]; root of context hierarchy
+2016-02-25 16:38:11,876 INFO org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/books/books-by-title],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.util.List<pl.spring.demo.to.BookTo> pl.spring.demo.web.rest.BookRestService.findBooksByTitle(java.lang.String)
+2016-02-25 16:38:11,876 INFO org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/books/book],methods=[DELETE],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void pl.spring.demo.web.rest.BookRestService.removeBook(java.lang.Long)
+2016-02-25 16:38:11,877 INFO org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/books/book],methods=[PUT],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public pl.spring.demo.to.BookTo pl.spring.demo.web.rest.BookRestService.bookUpdate(pl.spring.demo.to.BookTo)
+2016-02-25 16:38:11,877 INFO org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/books/book/{id}],methods=[DELETE],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void pl.spring.demo.web.rest.BookRestService.deleteBook(long)
+2016-02-25 16:38:11,877 INFO org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/books/book],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public pl.spring.demo.to.BookTo pl.spring.demo.web.rest.BookRestService.saveBook(pl.spring.demo.to.BookTo)
+2016-02-25 16:38:12,002 INFO org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@46238e3f: startup date [Thu Feb 25 16:38:11 CET 2016]; root of context hierarchy
+2016-02-25 16:38:12,063 INFO org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@46238e3f: startup date [Thu Feb 25 16:38:11 CET 2016]; root of context hierarchy
+2016-02-25 16:38:12,138 INFO org.springframework.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/static/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#0'
+2016-02-25 16:38:12,354 INFO org.springframework.mock.web.MockServletContext - Initializing Spring FrameworkServlet ''
+2016-02-25 16:38:12,355 INFO org.springframework.test.web.servlet.TestDispatcherServlet - FrameworkServlet '': initialization started
+2016-02-25 16:38:12,378 INFO org.springframework.test.web.servlet.TestDispatcherServlet - FrameworkServlet '': initialization completed in 23 ms
+2016-02-25 16:38:12,409 WARN org.springframework.web.servlet.PageNotFound - No mapping found for HTTP request with URI [/book] in DispatcherServlet with name ''
+]]></system-out>
+  </testcase>
+  <testcase name="testShouldCallBookService" classname="pl.spring.demo.web.rest.BookRestServiceTest" time="0.01">
+    <failure message="&#10;Wanted but not invoked:&#10;bookService.findBooksByTitle(&quot;testTitle&quot;);&#10;-&gt; at pl.spring.demo.web.rest.BookRestServiceTest.testShouldCallBookService(BookRestServiceTest.java:65)&#10;Actually, there were zero interactions with this mock.&#10;" type="org.mockito.exceptions.verification.WantedButNotInvoked">org.mockito.exceptions.verification.WantedButNotInvoked: 
+Wanted but not invoked:
+bookService.findBooksByTitle("testTitle");
+-> at pl.spring.demo.web.rest.BookRestServiceTest.testShouldCallBookService(BookRestServiceTest.java:65)
+Actually, there were zero interactions with this mock.
+
+	at pl.spring.demo.web.rest.BookRestServiceTest.testShouldCallBookService(BookRestServiceTest.java:65)
+</failure>
+    <system-out><![CDATA[2016-02-25 16:38:12,419 INFO org.springframework.mock.web.MockServletContext - Initializing Spring FrameworkServlet ''
+2016-02-25 16:38:12,419 INFO org.springframework.test.web.servlet.TestDispatcherServlet - FrameworkServlet '': initialization started
+2016-02-25 16:38:12,420 INFO org.springframework.test.web.servlet.TestDispatcherServlet - FrameworkServlet '': initialization completed in 1 ms
+2016-02-25 16:38:12,422 WARN org.springframework.web.servlet.PageNotFound - No mapping found for HTTP request with URI [/books-by-title] in DispatcherServlet with name ''
+]]></system-out>
+  </testcase>
+  <testcase name="testShouldSaveBook" classname="pl.spring.demo.web.rest.BookRestServiceTest" time="0.01">
+    <failure message="Status expected:&lt;200&gt; but was:&lt;404&gt;" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: Status expected:<200> but was:<404>
+	at org.springframework.test.util.AssertionErrors.fail(AssertionErrors.java:60)
+	at org.springframework.test.util.AssertionErrors.assertEquals(AssertionErrors.java:89)
+	at org.springframework.test.web.servlet.result.StatusResultMatchers$10.match(StatusResultMatchers.java:653)
+	at org.springframework.test.web.servlet.MockMvc$1.andExpect(MockMvc.java:152)
+	at pl.spring.demo.web.rest.BookRestServiceTest.testShouldSaveBook(BookRestServiceTest.java:91)
+]]></failure>
+    <system-out><![CDATA[2016-02-25 16:38:12,429 INFO org.springframework.mock.web.MockServletContext - Initializing Spring FrameworkServlet ''
+2016-02-25 16:38:12,429 INFO org.springframework.test.web.servlet.TestDispatcherServlet - FrameworkServlet '': initialization started
+2016-02-25 16:38:12,430 INFO org.springframework.test.web.servlet.TestDispatcherServlet - FrameworkServlet '': initialization completed in 1 ms
+2016-02-25 16:38:12,438 WARN org.springframework.web.servlet.PageNotFound - No mapping found for HTTP request with URI [/book] in DispatcherServlet with name ''
+]]></system-out>
+  </testcase>
 </testsuite>

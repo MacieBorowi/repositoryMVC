@@ -9,8 +9,8 @@ import pl.spring.demo.to.BookTo;
 import java.util.List;
 import java.util.Map;
 
-@Controller
-@ResponseBody
+@RestController
+@RequestMapping("/books")
 public class BookRestService {
 
     @Autowired
@@ -30,10 +30,15 @@ public class BookRestService {
 	public void removeBook(@RequestBody Long id) {
 		bookService.removeBookById(id);
 	}
-
+    
 	@RequestMapping(value = "/book", method = RequestMethod.PUT)
 	public BookTo bookUpdate(@RequestBody BookTo book) {
 		return bookService.saveBook(book);
+	}
+
+	@RequestMapping(value = "/book/{bookId}", method = RequestMethod.DELETE)
+	public void deleteBook(@PathVariable("bookId") long bookId) {
+		bookService.removeBookById(bookId);
 	}
 	
 	//Poster

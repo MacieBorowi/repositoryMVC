@@ -1,4 +1,29 @@
 -------------------------------------------------------------------------------
 Test set: pl.spring.demo.web.rest.BookRestServiceTest
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.74 sec - in pl.spring.demo.web.rest.BookRestServiceTest
+Tests run: 3, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 1.424 sec <<< FAILURE! - in pl.spring.demo.web.rest.BookRestServiceTest
+testShouldRemoveBook(pl.spring.demo.web.rest.BookRestServiceTest)  Time elapsed: 0.079 sec  <<< FAILURE!
+java.lang.AssertionError: Status expected:<200> but was:<404>
+	at org.springframework.test.util.AssertionErrors.fail(AssertionErrors.java:60)
+	at org.springframework.test.util.AssertionErrors.assertEquals(AssertionErrors.java:89)
+	at org.springframework.test.web.servlet.result.StatusResultMatchers$10.match(StatusResultMatchers.java:653)
+	at org.springframework.test.web.servlet.MockMvc$1.andExpect(MockMvc.java:152)
+	at pl.spring.demo.web.rest.BookRestServiceTest.testShouldRemoveBook(BookRestServiceTest.java:109)
+
+testShouldCallBookService(pl.spring.demo.web.rest.BookRestServiceTest)  Time elapsed: 0.01 sec  <<< FAILURE!
+org.mockito.exceptions.verification.WantedButNotInvoked: 
+Wanted but not invoked:
+bookService.findBooksByTitle("testTitle");
+-> at pl.spring.demo.web.rest.BookRestServiceTest.testShouldCallBookService(BookRestServiceTest.java:65)
+Actually, there were zero interactions with this mock.
+
+	at pl.spring.demo.web.rest.BookRestServiceTest.testShouldCallBookService(BookRestServiceTest.java:65)
+
+testShouldSaveBook(pl.spring.demo.web.rest.BookRestServiceTest)  Time elapsed: 0.01 sec  <<< FAILURE!
+java.lang.AssertionError: Status expected:<200> but was:<404>
+	at org.springframework.test.util.AssertionErrors.fail(AssertionErrors.java:60)
+	at org.springframework.test.util.AssertionErrors.assertEquals(AssertionErrors.java:89)
+	at org.springframework.test.web.servlet.result.StatusResultMatchers$10.match(StatusResultMatchers.java:653)
+	at org.springframework.test.web.servlet.MockMvc$1.andExpect(MockMvc.java:152)
+	at pl.spring.demo.web.rest.BookRestServiceTest.testShouldSaveBook(BookRestServiceTest.java:91)
+
